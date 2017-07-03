@@ -39,23 +39,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        $this->mapBackendRoutes();
-
         //
-    }
-
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapBackendRoutes()
-    {
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/backend.php'));
     }
 
     /**
