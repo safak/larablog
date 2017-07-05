@@ -19,7 +19,7 @@ Route::get('/admin', function (){
 
     return view('admin.index');
 
-})->name('admin.index');
+})->name('admin.index')->middleware('auth');
 
 Route::get('/admin/blog', 'Backend\BlogController@index')->name('admin.blog.index');
 Route::get('/admin/blog/create', 'Backend\BlogController@create')->name('admin.blog.create');
